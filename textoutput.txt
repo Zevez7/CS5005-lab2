@@ -10,5 +10,4 @@ Encountered an error: Cannot be zero or negative time
 
 After switching the 5s with 0s, the program ended early with only showing
 the displacement and an error message. The program caught an error because the
-denominator for the calculation of velocity was set to 0. This terminated the
-program early.
+denominator for the calculation of velocity was set to 0.
