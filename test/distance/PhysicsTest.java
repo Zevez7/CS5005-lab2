@@ -5,6 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Unit test for the physics class with 5 point3d attributes.
+ */
 public class PhysicsTest {
 
   Point3D point1;
@@ -13,6 +16,9 @@ public class PhysicsTest {
   Point3D point4;
   Point3D point5;
 
+  /**
+   * Setup the point3D class instance with different points for x,y,z
+   */
   @Before
   public void setUp() {
 
@@ -23,6 +29,9 @@ public class PhysicsTest {
     point5 = new Point3D(-653, -261, -975);
   }
 
+  /**
+   * Test the velocity method with different points and time.
+   */
   @Test
   public void testVelocity() {
 
@@ -37,7 +46,9 @@ public class PhysicsTest {
     assertEquals(0.349, actual4, 0.001);
   }
 
-
+  /**
+   * Test for negative time which should trigger the illegalArgumentexception
+   */
   @Test(expected = IllegalArgumentException.class)
   public void testNegTimeVelocity() {
 
@@ -45,6 +56,9 @@ public class PhysicsTest {
     Physics.velocity(point3, point4, -40);
   }
 
+  /**
+   * Test for zero time which should trigger the illegalArgumentexception
+   */
   @Test(expected = IllegalArgumentException.class)
   public void testZeroTimeVelocity() {
 

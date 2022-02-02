@@ -1,0 +1,14 @@
+Displacement = 1.7320508075688772
+Prof. Keith is on the move! His Velocity =0.34641016151377546
+Encountered an error: Cannot be zero or negative time
+
+The first output shows the displacement and velocity of the 5s time period.
+The 2nd output with 0s time period ended with an error message.
+
+Displacement = 1.7320508075688772
+Encountered an error: Cannot be zero or negative time
+
+After switching the 5s with 0s, the program ended early with only showing
+the displacement and an error message. The program caught an error because the
+denominator for the calculation of velocity was set to 0. This terminated the
+program early.

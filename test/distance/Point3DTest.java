@@ -69,8 +69,10 @@ public class Point3DTest {
   public void testEquals() {
     assertNotEquals(null, point1);
     assertNotEquals(null, point2);
+    assertNotEquals(point2, null);
     assertNotEquals(point1, point2);
     assertNotEquals(point5, point3);
+
     assertEquals(point2, point2);
     assertEquals(point1, point1);
     assertEquals(point5, point5);
