@@ -3,6 +3,7 @@
  CS5005 Lab2
  Spring 2022
  */
+
 package distance;
 
 /**
@@ -15,7 +16,7 @@ public class Point3D {
   private int z;
 
   /**
-   * The default constructor with no initial location provided
+   * The default constructor with no initial location provided.
    */
   public Point3D() {
     this.x = 0;
@@ -24,7 +25,7 @@ public class Point3D {
   }
 
   /**
-   * Initiate the point3d class instance with 3 int location
+   * Initiate the point3d class instance with 3 int location.
    *
    * @param x integer location
    * @param y integer location
@@ -47,35 +48,35 @@ public class Point3D {
   public double distanceTo(Point3D other) {
 
     double value = Math.sqrt(
-        Math.pow(other.x - this.x, 2) +
-            Math.pow(other.y - this.y, 2) +
-            Math.pow(other.z - this.z, 2)
+        Math.pow(other.x - this.x, 2)
+            + Math.pow(other.y - this.y, 2)
+            + Math.pow(other.z - this.z, 2)
     );
     return value;
   }
 
   /**
-   * Get the x attribute of the class instance
+   * Get the x attribute of the class instance.
    *
-   * @return x attribute int
+   * @return x attribute int.
    */
   public int getX() {
     return x;
   }
 
   /**
-   * Get the y attribute of the class instance
+   * Get the y attribute of the class instance.
    *
-   * @return y attribute int
+   * @return y attribute int.
    */
   public int getY() {
     return y;
   }
 
   /**
-   * Get the z attribute of the class instance
+   * Get the z attribute of the class instance.
    *
-   * @return z attribute int
+   * @return z attribute int.
    */
   public int getZ() {
     return z;

@@ -3,6 +3,7 @@
  CS5005 Lab2
  Spring 2022
  */
+
 package distance;
 
 /**

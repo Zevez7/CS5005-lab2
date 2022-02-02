@@ -1,6 +1,12 @@
+/*
+ Dat Nguyen
+ CS5005 Lab2
+ Spring 2022
+ */
+
 package distance;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +23,7 @@ public class PhysicsTest {
   Point3D point5;
 
   /**
-   * Setup the point3D class instance with different points for x,y,z
+   * Setup the point3D class instance with different points for x,y,z.
    */
   @Before
   public void setUp() {
@@ -36,18 +42,21 @@ public class PhysicsTest {
   public void testVelocity() {
 
     double actual1 = Physics.velocity(point1, point2, 5);
-    double actual2 = Physics.velocity(point3, point4, 40);
-    double actual3 = Physics.velocity(point1, point5, 235);
-    double actual4 = Physics.velocity(point5, point2, 3456);
-
     assertEquals(1.3856, actual1, 0.001);
+
+    double actual2 = Physics.velocity(point3, point4, 40);
     assertEquals(2910.709, actual2, 0.001);
+
+    double actual3 = Physics.velocity(point1, point5, 235);
     assertEquals(5.115, actual3, 0.001);
+
+    double actual4 = Physics.velocity(point5, point2, 3456);
     assertEquals(0.349, actual4, 0.001);
+
   }
 
   /**
-   * Test for negative time which should trigger the illegalArgumentexception
+   * Test for negative time which should trigger the illegalArgumentexception.
    */
   @Test(expected = IllegalArgumentException.class)
   public void testNegTimeVelocity() {
@@ -57,7 +66,7 @@ public class PhysicsTest {
   }
 
   /**
-   * Test for zero time which should trigger the illegalArgumentexception
+   * Test for zero time which should trigger the illegalArgumentexception.
    */
   @Test(expected = IllegalArgumentException.class)
   public void testZeroTimeVelocity() {

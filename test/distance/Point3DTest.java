@@ -1,10 +1,20 @@
+/*
+ Dat Nguyen
+ CS5005 Lab2
+ Spring 2022
+ */
+
 package distance;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Test for the class Point3D with 5 point3D attributes.
+ */
 public class Point3DTest {
 
   Point3D point1;
@@ -13,6 +23,9 @@ public class Point3DTest {
   Point3D point4;
   Point3D point5;
 
+  /**
+   * Setup the point3D class instance with different points for x,y,z.
+   */
   @Before
   public void setUp() {
 
@@ -24,6 +37,9 @@ public class Point3DTest {
 
   }
 
+  /**
+   * Test to find the distance between the two points.
+   */
   @Test
   public void testDistanceTo() {
 
@@ -34,7 +50,9 @@ public class Point3DTest {
     assertEquals(1202.145, point1.distanceTo(point5), 0.001);
   }
 
-
+  /**
+   * Test to get the instance x value.
+   */
   @Test
   public void testGetX() {
 
@@ -46,6 +64,9 @@ public class Point3DTest {
   }
 
 
+  /**
+   * Test to get the instance y value.
+   */
   @Test
   public void testGetY() {
     assertEquals(0, point1.getY());
@@ -55,6 +76,9 @@ public class Point3DTest {
     assertEquals(-261, point5.getY());
   }
 
+  /**
+   * Test to get the instance z value.
+   */
   @Test
   public void testGetZ() {
     assertEquals(0, point1.getZ());
@@ -65,6 +89,9 @@ public class Point3DTest {
 
   }
 
+  /**
+   * Test to determine if to point3d instance are the same.
+   */
   @Test
   public void testEquals() {
     assertNotEquals(null, point1);
